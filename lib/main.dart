@@ -31,9 +31,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     String name = 'Durrell Gemuh A.';
+    String proffession = 'Flutter Developer';
     String image = 'assets/images/pp.jpg';
     String number = '+237 671 305 865';
     String email = 'durrellgemuh07@gmail.com';
+    String contact = 'Need one, Contact me';
 
     return Padding(
       padding: const EdgeInsets.all(8.0),
@@ -42,14 +44,22 @@ class _MyHomePageState extends State<MyHomePage> {
         children: [
           CircleAvatar(
             radius: 70,
-            child: Image.asset('$image'),
+            backgroundImage: AssetImage('$image'),
           ),
           SizedBox(
             height: 10,
           ),
           Text(
             '$name',
-            style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+            style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white70),
+          ),
+          Text(
+            '$proffession',
+            style: TextStyle(
+                fontSize: 15, fontWeight: FontWeight.bold, color: Colors.grey),
           ),
           SizedBox(
             height: 50,
@@ -77,7 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           Container(
             child: Text(
-              "Need one, Contact me",
+              '$contact',
               style: TextStyle(color: Colors.blueGrey.shade900),
             ),
             margin: EdgeInsets.all(30),
